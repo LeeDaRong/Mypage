@@ -1,0 +1,94 @@
+body {
+
+    background: linear-gradient(-45deg, #AFD0ED, #52A1F1)fixed;
+    background-size: cover;
+}
+
+
+/*메인글씨*/
+.subtext {
+    font-size: 20px;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.mtext {
+    font-size: 50px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/*메인글씨*/
+
+
+/*오디오*/
+.myAudio {
+    font-size: 100px;
+    float: right;
+}
+
+/*오디오*/
+
+
+/*메뉴 열기닫기*/
+.menu_img {
+    width: 10px;
+}
+
+.closebtn {
+    text-align: left;
+}
+
+/*메뉴 열기닫기*/
+
+
+
+/*사이드메뉴*/
+.top_nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.aside {
+    margin: 0px;
+    padding: 0px;
+
+}
+
+.menuimg {
+    width: 300px;
+    border: 1px solid black;
+}
+
+/*사이드메뉴*/
+
+
+
+/*카카오톡 대화하기*/
+.ico_1 {
+    padding-left: 30px;
+    margin: auto;
+    font-size: 100px;
+    color: white;
+}
+
+.top_nav2 {
+    text-align: center;
+}
+
+.talktt {
+    list-style-type: none;
+    font-size: 20px;
+    text-align: center;
+}
+
+.talk_img {
+    color: navy;
+    text-decoration: none;
+    width: 100px;
+}
+
+/*카카오톡 대화하기*/

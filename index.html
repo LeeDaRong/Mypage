@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <title>Homepage</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+    <!--    css-->
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="aside.css">
+    <link rel="stylesheet" href="media.css">
+    <link rel="stylesheet" href="slides.css">
+    <!--    font-->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap" rel="stylesheet">
+
+</head>
+
+
+<body>
+    <script src="https://kit.fontawesome.com/a076d05399.js">
+    </script>
+    <!--    사이드메뉴-->
+    <div class="top_nav">
+        <div id="aside" class="asides">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&#9776;</a>
+            <a href="#">메뉴1</a>
+            <a href="#">메뉴2</a>
+            <a href="#">메뉴3</a>
+            <a href="#">메뉴4</a>
+        </div>
+
+        <span style="font-size:100px;cursor:pointer" onclick="openNav()">
+            <i class="fas fa-bars ico_1"></i>
+        </span>
+        <!--사이드메뉴 끝-->
+
+        <!--    오디오-->
+
+        <audio class="myAudio" src="allways.mp3" autoplay loop controls>
+            오디오를 지원하지 않습니다.
+        </audio>
+    </div>
+    <div class="mainpagetext">
+        <h1 class="mainpage mtext">Apeach</h1>
+        <p class="subtext">해당 홈페이지는 제작중입니다.</p>
+    </div>
+    <!--    슬라이드-->
+    <div id="slide">
+        <div class="slideshow-container">
+
+            <div class="Slides fage">
+                <img src="1%20(1).jpg" alt="slide 1" style="width:80%">
+            </div>
+
+            <div class="Slides fage">
+                <!--                <div class="numbertext">2 / 3</div>-->
+                <img src="1%20(2).jpg" alt="slide 2" style="width:80%">
+                <!--                <div class="text">Caption Two</div>-->
+            </div>
+
+            <div class="Slides fage">
+                <img src="1%20(3).jpg" alt="slide 3" style="width:80%">
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            <div style="text-align:center">
+                <span class="slide_n" onclick="currentSlide(1)"></span>
+                <span class="slide_n" onclick="currentSlide(2)"></span>
+                <span class="slide_n" onclick="currentSlide(3)"></span>
+            </div>
+
+        </div>
+    </div>
+    <div class="top_nav2">
+        <a class="talk_img" href="https://open.kakao.com/o/sGP5fHGc" target="_blank"> <img class="talk_img" src="talk2.png" alt="talk">
+            <ul>
+                <li class="talktt"><strong>1:1 Chat</strong></li>
+            </ul>
+        </a>
+    </div>
+    <br>
+    <!--    댓글기능-->
+    <div id="disqus_thread"></div>
+    <script>
+        /**
+         *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+         *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+        /*
+        var disqus_config = function () {
+        this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        };
+        */
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document,
+                s = d.createElement('script');
+            s.src = 'https://http-studynote-dothome-co-kr.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+    <!--슬라이드 스크립트-->
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("Slides");
+            var dots = document.getElementsByClassName("slide_n");
+            if (n > slides.length) {
+                slideIndex = 1
+            }
+            if (n < 1) {
+                slideIndex = slides.length
+            }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+
+    </script>
+    <!--           사이드메뉴 스크립트-->
+    <script>
+        function openNav() {
+            document.getElementById("aside").style.width = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("aside").style.width = "0";
+        }
+
+    </script>
+</body>
+
+</html>
